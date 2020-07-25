@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Ineptor_driver">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/Ineptor_driver" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/Ineptor_driver" recursive="false" />
+  </library>
+</component>

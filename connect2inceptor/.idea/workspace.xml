@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="inceptor:jar" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="fb942233-2590-4c2b-94a5-29165d1a64c9" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="C:/maven" />
+        <option name="userSettingsFile" value="C:\maven\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1ZhhDY3DW2ilrFPXlXxDUKxTRSS" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\代码\inceptor\src\main\resources" />
+      <recent name="C:\Users\Administrator\Desktop\代码\inceptor\krb5" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.MM">
+    <configuration name="Demo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Demo" />
+      <module name="connect2inceptor" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="K8sAuthentication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="K8sAuthentication" />
+      <module name="connect2inceptor" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MM" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MM" />
+      <module name="connect2inceptor" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Test" />
+      <module name="connect2inceptor" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MM" />
+        <item itemvalue="Application.K8sAuthentication" />
+        <item itemvalue="Application.Test" />
+        <item itemvalue="Application.Demo" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fb942233-2590-4c2b-94a5-29165d1a64c9" name="Default Changelist" comment="" />
+      <created>1585297113415</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1585297113415</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="275" y="22" key="#Project_Structure" timestamp="1585548218265">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="22" key="#Project_Structure/0.0.1366.728@0.0.1366.728" timestamp="1585548218265" />
+    <state x="434" y="148" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1585559743251">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="434" y="148" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1366.728@0.0.1366.728" timestamp="1585559743251" />
+    <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1585561709659">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1585561709659" />
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1589435833119">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1589435833119" />
+    <state width="1323" height="377" key="GridCell.Tab.0.bottom" timestamp="1585561908608">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="377" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1585561908608" />
+    <state width="1323" height="377" key="GridCell.Tab.0.center" timestamp="1585561908608">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="377" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1585561908608" />
+    <state width="1323" height="377" key="GridCell.Tab.0.left" timestamp="1585561908608">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="377" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1585561908608" />
+    <state width="1323" height="377" key="GridCell.Tab.0.right" timestamp="1585561908608">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="377" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1585561908608" />
+    <state x="184" y="0" key="SettingsEditor" timestamp="1589435731775">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="184" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1589435731775" />
+    <state x="363" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1585565054509">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="363" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1585565054509" />
+  </component>
+</project>
