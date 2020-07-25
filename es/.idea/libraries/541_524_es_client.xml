@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="541-524-es-client">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../es_driver/541-524-es-client" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/../es_driver/541-524-es-client" recursive="false" />
+  </library>
+</component>
