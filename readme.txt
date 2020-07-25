@@ -1,2 +1,1 @@
-connect2inceptor
-是java连接Inceptor代码
+connect2inceptor分支是java连接Inceptor代码
