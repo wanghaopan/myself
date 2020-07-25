@@ -1,2 +1,0 @@
-connect2inceptor
-是java连接Inceptor代码
