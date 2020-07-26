@@ -1,0 +1,7 @@
+.git/
+.idea/
+*.pyc
+.gitignore
+venv/
+document/
+charts/

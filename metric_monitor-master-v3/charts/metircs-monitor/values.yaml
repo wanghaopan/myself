@@ -1,0 +1,75 @@
+image:
+  repository: 10.168.25.194:5000/transwarp/metrics-monitor
+  tag: v2
+  pullPolicy: Always
+resources:
+  limits:
+    cpu: "2"
+    memory: 4Gi
+  requests:
+    cpu: "1"
+    memory: 2Gi
+
+annotations:
+  cni.networks: overlay
+
+dnsPolicy: ClusterFirst
+priorityClassName: low-priority
+restartPolicy: Always
+schedulerName: default-scheduler
+
+topologyKey: kubernetes.io/hostname
+securityContext: {}
+
+affinity:
+ nodeAffinity:
+   requiredDuringSchedulingIgnoredDuringExecution:
+     nodeSelectorTerms:
+     - matchExpressions:
+       - key: master
+         operator: Exists
+
+tolerations:
+ - key: master
+   operator: Exists
+
+configmap:
+  Config.py: |-
+    # -*- coding: utf-8 -*-
+
+    LOGGER_LOC = "/tmp/metrics_monitor.log"
+
+    PROMETHEUS_URL = "http://172.18.28.13:31601"
+
+    # 扩容时是否考虑过去一段时间提交的job/stage，默认为false/0，设置为1，则开启检查
+    EXPANSION_CHECK_DURATION = 0
+    LAST_DURATION_TIME = "600s"
+
+    INCEPTOR_DBASERVICE_URL = ""
+    INCEPTOR_SPARK_UI_URL = "http://10.168.25.194:31043"
+    INCEPTOR_SERVER_UUID = ""
+
+    NAMESPACE = "demo"
+    INCEPTOR_INSTANCE_NAME = "clus-245--clus-245-inceptor-5-2-77c3"
+
+    EXECUTOR_MIN_REPLICA = 1
+    EXECUTOR_MAX_REPLICA = 5
+
+    EXECUTOR_EVERY_INCREASE_OR_DECREASE_CAPACITY = 2
+    EXECUTOR_POD_NAME_PREFIX = "executor-6sm7g"
+
+    EXECUTOR_MAX_ACTIVE_STAGE = 2
+    EXECUTOR_MAX_PENDING_STAGE = 2
+    EXECUTOR_MAX_RUNNING_JOB = 2
+    EXECUTOR_DURATION_MAX_SUBMIT_JOB = 2
+    EXECUTOR_DURATION_MAX_SUBMIT_STAGE = 2
+    # 第二~第四是缩容指标，第五~第八是扩容指标，第九~第十是扩容考虑过去一段时间job、过去一段时间stage，默认不检查，暂时未添加配置。
+    # [权重,active job num, 过去一段时间job num, pending stage num, active job num, active stage num, pending stage num, executor usage,duration job,duration stage]
+    # sla级别从0开始，0-4
+    SLA = [20,4,8,0,10,20,7,80,0,0],[40,3,6,0,8,16,5,60,0,0],[60,2,4,0,6,12,3,50,0,0],[80,1,2,0,4,8,1,40,0,0],[100,0,0,0,0,0,0,0,0,0]
+
+    #[namespace,instance,sla level,spark-ui, executor_pod_name_prefix]
+    INCEPTOR_INFO_LEN = 5
+    INCEPTOR_LIST = ["9qfqiiz","clus-369--clus-369-slipstream-6-0-91e0",3,"http://172.18.28.13:31765", "executor-48wph"],[]
+
+    # /api/inceptor/servers

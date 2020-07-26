@@ -1,0 +1,12 @@
+Prometheus:
+  https://prometheus.io/docs/prometheus/latest/querying/api/
+  https://prometheus.io/docs/prometheus/latest/querying/api/#expression-query-result-formats
+  https://blog.csdn.net/weixin_38645718/article/details/84105437
+
+Rules:
+  document/Rules.md
+
+Inceptor SparkUI RestApi:
+  http://172.16.1.168:8090/pages/viewpage.action?pageId=8259227#SparkREST%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95-Stages%E6%8E%A5%E5%8F%A3
+  eg:
+   curl http://172.16.3.130:32318/api/stages?"sinceTime=20200219132555&details=true" |jq .

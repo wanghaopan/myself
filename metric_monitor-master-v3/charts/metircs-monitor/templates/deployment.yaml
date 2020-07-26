@@ -1,0 +1,89 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    app: {{ template "metrics-monitor.fullname" . }}
+    chart: {{ .Chart.Name }}-{{ .Chart.Version }}
+    heritage: {{ .Release.Service }}
+    release: {{ .Release.Name }}
+  name: {{ .Release.Name }}
+  namespace: {{ .Release.Namespace }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{ template "metrics-monitor.fullname" . }}
+      release: {{ .Release.Name }}
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+    type: RollingUpdate
+  template:
+    metadata:
+      annotations:
+{{- if .Values.annotations }}
+{{ toYaml .Values.annotations | indent 8 }}
+{{- end }}
+      labels:
+        app: {{ template "metrics-monitor.fullname" . }}
+        chart: {{ .Chart.Name }}-{{ .Chart.Version }}
+        heritage: {{ .Release.Service }}
+        release: {{ .Release.Name }}
+    spec:
+      affinity:
+      {{- if .Values.affinity }}
+      {{- if .Values.affinity.nodeAffinity }}
+        nodeAffinity:
+{{ toYaml .Values.affinity.nodeAffinity | indent 10 }}
+      {{- end }}
+      {{- end }}
+      containers:
+      - command:
+        - /bin/bash
+        - -c
+        - \cp /opt/metrics-monitor/conf/Config.py /opt/metrics-monitor/ && /opt/metrics-monitor/metrics_monitor.sh
+        env:
+        - name: Pod_Name
+          valueFrom:
+            fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.name
+        - name: Pod_Namespace
+          valueFrom:
+            fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+        image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
+        imagePullPolicy: {{ .Values.image.pullPolicy }}
+        name: {{ .Chart.Name }}
+        resources:
+{{ toYaml .Values.resources | indent 12 }}
+        volumeMounts:
+        - mountPath: /opt/metrics-monitor/conf/
+          name: metrics-monitor-conf
+      {{- if .Values.dnsPolicy }}
+      dnsPolicy: {{ .Values.dnsPolicy }}
+      {{- end }}
+      {{- if .Values.priorityClassName }}
+      priorityClassName: {{ .Values.priorityClassName }}
+      {{- end }}
+     {{- if .Values.restartPolicy }}
+      restartPolicy: {{ .Values.restartPolicy }}
+      {{- end }}
+      serviceAccount: {{ .Release.Name }}
+      serviceAccountName: {{ .Release.Name }}
+      {{- if .Values.tolerations }}
+      {{- with .Values.tolerations }}
+      tolerations:
+{{ toYaml . | indent 8 }}
+     {{- end }}
+     {{- end }}
+      volumes:
+      - configMap:
+          defaultMode: 420
+          items:
+          - key: Config.py
+            path: Config.py
+          name: {{ .Release.Name }}-conf
+        name: metrics-monitor-conf

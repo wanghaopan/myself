@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" name="udfa:jar">
-    <output-path>$PROJECT_DIR$/out/artifacts/udfa_jar</output-path>
-    <root id="archive" name="udfa.jar">
-      <element id="module-output" name="udfa" />
-    </root>
-  </artifact>
-</component>

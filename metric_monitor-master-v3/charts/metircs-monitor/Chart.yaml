@@ -1,0 +1,11 @@
+name: metrics-monitor
+version: 1.0.0
+appVersion: 1.0.0
+description: metrics monitor
+keywords:
+- metric
+- transwarp
+home: https://transwarp.io/
+sources:
+- https://transwarp.io/
+engine: gotpl
