@@ -4,3 +4,4 @@ spark_hbase是java代码操作hbase spark提交任务
 search java连接5.2的search
 hdfs java连接hdfs
 udaf inceptor（hive的UDAF）
+kuosuorong DCOS executor动态扩缩容
